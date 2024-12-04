@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reseñas</title>
+</head>
+<body>
+    <h1>Reseñas para el Restaurante</h1>
+    <ul>
+        <li th:each="review : ${reviews}">
+            <strong th:text="${review.reviewerName}"></strong>: 
+            <span th:text="${review.comment}"></span> 
+            (Rating: <span th:text="${review.rating}"></span>)
+        </li>
+    </ul>
+</body>
+</html>

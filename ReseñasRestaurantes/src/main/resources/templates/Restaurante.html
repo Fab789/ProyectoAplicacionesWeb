@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Restaurantes</title>
+</head>
+<body>
+    <h1>Restaurantes</h1>
+    <ul>
+        <li th:each="restaurant : ${restaurants}">
+            <span th:text="${restaurant.name}"></span>
+            (<span th:text="${restaurant.location}"></span>)
+        </li>
+    </ul>
+</body>
+</html>
